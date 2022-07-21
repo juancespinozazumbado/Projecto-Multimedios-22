@@ -1,6 +1,6 @@
 <template>
   <div class="mx-3">
-      <h2 class="mt-2 grey--text"> Populars Movies</h2>
+      <h2 class="mt-2 grey--text"> Upcoming Movies</h2>
      <v-container fluid>
     <v-row>
         <v-col cols="12" sm="3" v-for="movie in movies" :key="movie.id"  >
@@ -27,7 +27,7 @@ data: function (){
 async mounted(){
   this.fetchGenres();
   try {
-     const response = await this.$http.get("/movie/popular");
+     const response = await this.$http.get("/movie/upcoming");
      this.movies = response.data.results;
   }catch (error) {
     console.log(error);

@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import MovieDetail from '../components/MovieDetail.vue'
 import Actors from '../components/Actors.vue'
 import ActorDetail from '../components/ActorDetail.vue'
+import UpcomingMovieTable from '../components/UpcomingMovieTable.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -34,7 +35,12 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+  },
+  {
+    path:"/upcomingmovietable",
+    name:"upcomingmovietable",
+    component: UpcomingMovieTable
+  },
 ]
 
 const router = new VueRouter({

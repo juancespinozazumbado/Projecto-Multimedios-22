@@ -46,7 +46,7 @@ export default {
     async fetchActors(page) {
       try {
         const response = await this.$http.get(
-          "https://api.themoviedb.org/3/person/popular?page=" + page
+          "https://api.themoviedb.org/3/person/popular?page=language=es-ES" + page
         );
         this.actors = response.data.results;
         // this.actors.push(...response.data.results);

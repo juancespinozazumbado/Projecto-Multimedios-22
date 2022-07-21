@@ -1,10 +1,13 @@
+
 <template>
-    <nav>
+
+ <nav>
         <v-app-bar app color="black" dark>
             <v-icon class="mr-2 grey--text" to="/">fas fa-video</v-icon>
-            <v-toolbar-title class=grey--text>MovieLand</v-toolbar-title>
-            <v-btn text class="ml-2 grey--text" to="/">Movies</v-btn>
-            <v-btn text class="ml-2 grey--text" to="/actors">Actors</v-btn>
+            <v-toolbar-title class=grey--text>Movies Multimedia</v-toolbar-title>
+            <v-btn text class="ml-2 grey--text" to="/">Populars Movies</v-btn>
+             <v-btn text class="ml-2 grey--text" to="/upcomingMovieTable">Upcoming Movies</v-btn>
+              <v-btn text class="ml-2 grey--text" to="/actors">Actors</v-btn>
 
             <v-spacer></v-spacer>
             <v-autocomplete clearable hide-no-data hide-selected color="white" label="search"
@@ -13,14 +16,11 @@
                     <v-btn class grey--text text :to="`/movie/${item.id}`">{{ item.title }}</v-btn>
                 </template>
             </v-autocomplete>
-            <v-btn icon>
-                <v-badge color="grey" content="2" overlap>
-                    <v-icon color="gery">far fa-bell</v-icon>
-                </v-badge>
-            </v-btn>
+           
 
         </v-app-bar>
     </nav>
+    
 </template>
 
 <script>
@@ -47,6 +47,7 @@ export default {
     }
 }
 </script>
+
 
 <style>
 </style>

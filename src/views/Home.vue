@@ -1,7 +1,8 @@
 <template>
    <div>
-     <TrendingMovies />
      <UpcomingMovies />
+     <TrendingMovies />
+     
    </div>
 </template>
 
